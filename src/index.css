@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* *{
+    background-image: url(https://global.yamaha-motor.com/business/omdo/products/high-speed-boat/img/high-speed-boat_exteriors_004.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+} */

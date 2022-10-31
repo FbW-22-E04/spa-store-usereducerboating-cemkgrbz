@@ -62,33 +62,35 @@ function App() {
     const [state, dispatch] = useReducer(reducer, initialState)
 
     return (
-        <div className="flex justify-center items-center h-screen bg-gray-200">
+        <div className="flex justify-center items-center h-screen bg-[url(https://global.yamaha-motor.com/business/omdo/products/high-speed-boat/img/high-speed-boat_exteriors_004.jpg)] bg-cover">
             
-            <div className="bg-black w-[40rem] h-[20rem]">
+            <div className="bg-black/30 rounded w-[40rem] h-[20rem]">
 
-            <div className="text-white text-[3rem] text-center">
-                Speed: {state.speed}
-            </div>
-            <div className="text-white text-[3rem] text-center">
-                Gear: {state.gear}
-            </div>
-            <div className="text-white text-[3rem] text-center">
-                Switch On/Off: {state.switchOn ? "ON" : "OFF"}
-            </div>
-            <div className="flex justify-center gap-2 mt-8">
-                <button onClick={() => dispatch( {type: "switchOn" } )} className="border-2 p-2 bg-red-300">Start/Stop</button>
+                <div className="text-white text-[3rem] text-center">
+                    Speed: {state.speed}
+                </div>
+                <div className="text-white text-[3rem] text-center">
+                    Gear: {state.gear}
+                </div>
+                <div className="text-white text-[3rem] text-center">
+                    Switch On/Off: {state.switchOn ? "ON" : "OFF"}
+                </div>
+                <div className="flex justify-center gap-2 mt-8">
+                    <button onClick={() => dispatch( {type: "switchOn" } )} className="border-2 p-2 bg-red-300">Start/Stop</button>
 
-                <button onClick={() => dispatch( {type: "gearUp" } )} className="border-2 p-2 bg-green-300">Gear Up</button>
+                    <button onClick={() => dispatch( {type: "gearUp" } )} className="border-2 p-2 bg-green-300">Gear Up</button>
 
-                <button onClick={() => dispatch( {type: "gearDown" } )} className="border-2 p-2 bg-green-300">Gear Down</button>
+                    <button onClick={() => dispatch( {type: "gearDown" } )} className="border-2 p-2 bg-green-300">Gear Down</button>
 
-                <button onClick={() => dispatch( {type: "speedUp" } )} className="border-2 p-2 bg-blue-300">Speed Up</button>
+                    <button onClick={() => dispatch( {type: "speedUp" } )} className="border-2 p-2 bg-blue-300">Speed Up</button>
 
-                <button onClick={() => dispatch( {type: "speedDown" } )} className="border-2 p-2 bg-blue-300">Speed Down</button>
-            </div>
+                    <button onClick={() => dispatch( {type: "speedDown" } )} className="border-2 p-2 bg-blue-300">Speed Down</button>
+                </div>
             </div>
         </div>
     )
 }
 
 export default App;
+
+// 
